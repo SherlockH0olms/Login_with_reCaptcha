@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="utf-8"/>
+  <title>Dashboard - Klickon Auth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="dash">
+    <div class="dash-header">
+      <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
+      <div class="user-info">
+        <div class="welcome-msg">
+          <h2><i class="fa fa-user"></i> Xoş gəlmisiniz, {{ user.username }}!</h2>
+        </div>
+        <div class="user-details">
+          <p><i class="fa fa-envelope"></i> <strong>Email:</strong> {{ user.email }}</p>
+          <p><i class="fa fa-calendar"></i> <strong>Status:</strong> Aktiv istifadəçi</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="dash-content">
+      <div class="stats-row">
+        <div class="stat-box">
+          <i class="fa fa-check-circle"></i>
+          <h3>Hesab Aktivdir</h3>
+          <p>Sistemə uğurla daxil olmusunuz</p>
+        </div>
+        <div class="stat-box">
+          <i class="fa fa-shield"></i>
+          <h3>Təhlükəsiz Giriş</h3>
+          <p>Redis sessiyaları istifadə olunur</p>
+        </div>
+        <div class="stat-box">
+          <i class="fa fa-database"></i>
+          <h3>MongoDB</h3>
+          <p>Məlumatlar təhlükəsiz saxlanılır</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="dash-actions">
+      <form method="post" action="{{ url_for('logout') }}">
+        <button type="submit" class="btn logout-btn">
+          <i class="fa fa-sign-out"></i> Çıxış
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

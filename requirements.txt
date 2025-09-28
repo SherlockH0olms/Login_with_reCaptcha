@@ -1,0 +1,27 @@
+# Flask core
+Flask==2.3.2
+Flask-Session==0.5.0
+
+# Password hashing - direct bcrypt
+bcrypt==4.0.1
+
+# Email validation
+email-validator==1.3.1
+
+# Redis for sessions
+redis==4.5.5
+
+# Rate limiting
+Flask-Limiter==3.3.1
+
+# MongoDB
+pymongo==4.7.0
+
+# HTTP requests (reCAPTCHA üçün)
+requests==2.31.0
+
+# Environment variables
+python-dotenv==1.0.0
+
+# Security updates
+Werkzeug>=2.3.6
