@@ -1,4 +1,4 @@
-# Klickon Auth System 🔐
+# Klickon Intern Auth System 🔐
 
 Modern və təhlükəsiz authentication sistemi Flask, Redis, MongoDB və Google reCAPTCHA ilə.
 
